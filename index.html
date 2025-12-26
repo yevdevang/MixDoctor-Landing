@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MixDoctor - Professional Audio Analysis App. Analyze your audio mixes with AI-powered insights, track quality metrics, and improve your music production.">
+    <meta name="keywords" content="audio analysis, music production, mixing, mastering, audio quality, DAW, professional audio">
+    <title>MixDoctor - Professional Audio Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="./mix-doctor.png" alt="MixDoctor Logo" width="80" height="80">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="https://yevdevang.github.io/MixDoctor-Privacy-policy/" target="_blank">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Professional Audio Analysis<br>
+                    <span class="gradient-text">Right On Your Device</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Analyze your audio mixes with AI-powered insights. Get instant feedback on stereo width, 
+                    phase coherence, mono compatibility, and more. Elevate your music production.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://apps.apple.com/app/mixdoctor" class="btn btn-primary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+                        </svg>
+                        Download on App Store
+                    </a>
+                    <a href="#how-it-works" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Availability Section -->
+    <section class="platforms">
+        <div class="container">
+            <h2 class="section-title">Available on All Your Devices</h2>
+            <p class="section-subtitle">Seamless experience across Apple platforms</p>
+            
+            <div class="platforms-grid">
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                            <line x1="12" y1="18" x2="12" y2="18"/>
+                        </svg>
+                    </div>
+                    <h3>iOS</h3>
+                    <p>Optimized for iPhone with intuitive touch controls and on-the-go analysis</p>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                            <line x1="12" y1="18" x2="12.01" y2="18"/>
+                        </svg>
+                    </div>
+                    <h3>iPadOS</h3>
+                    <p>Enhanced interface for iPad with split-view support and Apple Pencil integration</p>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3>macOS</h3>
+                    <p>Full desktop experience with advanced features and professional workflow integration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Powerful Features for Audio Professionals</h2>
+            <p class="section-subtitle">Everything you need to analyze and improve your mixes</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎵</div>
+                    <h3>Import Your Audio Files</h3>
+                    <p>Support for WAV and MP3 formats. Import from your device, cloud storage, or drag and drop on macOS. Easy and intuitive file management.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Track Your Progress</h3>
+                    <p>Monitor analysis results with detailed dashboards. View total files, analyzed tracks, issues found, and average scores.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔬</div>
+                    <h3>Professional Mix Analysis</h3>
+                    <p>Get comprehensive analysis including stereo width, phase coherence, mono compatibility, dynamic range, and frequency balance.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Powered Insights</h3>
+                    <p>Receive intelligent mixing recommendations powered by Claude AI. Get actionable feedback to improve your mixes.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Privacy First</h3>
+                    <p>All analysis happens locally on your device. Your audio files never leave your device. Optional iCloud sync available.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Powered by Apple's Accelerate framework for ultra-fast DSP analysis. Get results in seconds, not minutes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Screenshots Gallery -->
+    <section class="screenshots-gallery">
+        <div class="container">
+            <h2 class="section-title">See MixDoctor in Action</h2>
+            <p class="section-subtitle">Beautiful, intuitive interface across all your devices</p>
+            
+            <!-- Platform Tabs -->
+            <div class="platform-tabs">
+                <button class="platform-tab active" data-platform="ios">iPhone</button>
+                <button class="platform-tab" data-platform="ipad">iPad</button>
+                <button class="platform-tab" data-platform="mac">Mac</button>
+            </div>
+            
+            <!-- Screenshot Viewer -->
+            <div class="screenshots-viewer">
+                <!-- iOS Screenshots -->
+                <div class="platform-screenshots active" data-platform="ios">
+                    <div class="screenshot-item">
+                        <img src="import-iOS.png" alt="Import Audio - iOS" loading="lazy">
+                        <div class="screenshot-caption">Import Your Audio Files</div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="dashboard-iOS.png" alt="Dashboard - iOS" loading="lazy">
+                        <div class="screenshot-caption">Track Your Progress</div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="result-iOS.png" alt="Analysis Results - iOS" loading="lazy">
+                        <div class="screenshot-caption">Professional Analysis</div>
+                    </div>
+                </div>
+                
+                <!-- iPadOS Screenshots -->
+                <div class="platform-screenshots" data-platform="ipad">
+                    <div class="screenshot-item">
+                        <img src="import-iPadOS.png" alt="Import Audio - iPad" loading="lazy">
+                        <div class="screenshot-caption">Import Your Audio Files</div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="dashboard-iPadOS.png" alt="Dashboard - iPad" loading="lazy">
+                        <div class="screenshot-caption">Track Your Progress</div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="result-iPadOS.png" alt="Analysis Results - iPad" loading="lazy">
+                        <div class="screenshot-caption">Professional Analysis</div>
+                    </div>
+                </div>
+                
+                <!-- macOS Screenshots -->
+                <div class="platform-screenshots" data-platform="mac">
+                    <div class="screenshot-item">
+                        <img src="import-MacOS.png" alt="Import Audio - Mac" loading="lazy">
+                        <div class="screenshot-caption">Import Your Audio Files</div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="dashboard-MacOS.png" alt="Dashboard - Mac" loading="lazy">
+                        <div class="screenshot-caption">Track Your Progress</div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="result-MacOS.png" alt="Analysis Results - Mac" loading="lazy">
+                        <div class="screenshot-caption">Professional Analysis</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features with Screenshots -->
+    <section class="features-detailed">
+        <div class="container">
+            <div class="feature-showcase">
+                <div class="feature-content">
+                    <div class="feature-number">01</div>
+                    <h3>Import Your Audio Files</h3>
+                    <p>Support for WAV and MP3 audio formats. Import from your device or iCloud Drive with ease. Drag and drop is available on macOS for streamlined desktop workflow. Batch import multiple files for efficient analysis.</p>
+                    <ul class="feature-list">
+                        <li>✓ WAV & MP3 format support</li>
+                        <li>✓ Drag and drop (macOS)</li>
+                        <li>✓ iCloud integration</li>
+                        <li>✓ Batch processing</li>
+                    </ul>
+                </div>
+                <div class="feature-image">
+                    <img src="import-iOS.png" alt="Import Audio Files" loading="lazy">
+                </div>
+            </div>
+
+            <div class="feature-showcase reverse">
+                <div class="feature-content">
+                    <div class="feature-number">02</div>
+                    <h3>Track Your Progress</h3>
+                    <p>Comprehensive dashboard showing all your analysis results at a glance. Monitor total files, analyzed tracks, issues found, and average quality scores. Filter by status and quickly identify tracks that need attention.</p>
+                    <ul class="feature-list">
+                        <li>✓ Real-time analytics</li>
+                        <li>✓ Quality score tracking</li>
+                        <li>✓ Issue detection</li>
+                        <li>✓ Smart filtering</li>
+                    </ul>
+                </div>
+                <div class="feature-image">
+                    <img src="dashboard-iOS.png" alt="Track Your Progress" loading="lazy">
+                </div>
+            </div>
+
+            <div class="feature-showcase">
+                <div class="feature-content">
+                    <div class="feature-number">03</div>
+                    <h3>Professional Mix Analysis</h3>
+                    <p>Get detailed analysis results with professional metrics including stereo width, phase coherence, mono compatibility, dynamic range, and frequency balance. Each metric comes with clear explanations and recommendations.</p>
+                    <ul class="feature-list">
+                        <li>✓ Comprehensive metrics</li>
+                        <li>✓ Visual representations</li>
+                        <li>✓ AI recommendations</li>
+                        <li>✓ Export reports</li>
+                    </ul>
+                </div>
+                <div class="feature-image">
+                    <img src="result-iOS.png" alt="Professional Analysis Results" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Three simple steps to better mixes</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Import Your Audio</h3>
+                    <p>Upload your audio files from your device, cloud storage, or drag and drop directly into the app.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Analyze & Track</h3>
+                    <p>Our advanced algorithms analyze your audio for quality metrics, potential issues, and mixing opportunities.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get Insights</h3>
+                    <p>Review detailed analysis results, AI recommendations, and actionable steps to improve your mix quality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analysis Metrics Section -->
+    <section class="metrics">
+        <div class="container">
+            <h2 class="section-title">Comprehensive Audio Metrics</h2>
+            <p class="section-subtitle">Professional-grade analysis for every aspect of your mix</p>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">↔️</div>
+                    <h3>Stereo Width</h3>
+                    <p>Measure the spatial distribution of your mix. Ensure proper stereo imaging without phase issues.</p>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon">🌊</div>
+                    <h3>Phase Coherence</h3>
+                    <p>Detect phase cancellation issues that can weaken your mix when played in mono.</p>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon">🔊</div>
+                    <h3>Mono Compatibility</h3>
+                    <p>Check how your mix translates to mono playback systems like smartphones and club systems.</p>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon">📈</div>
+                    <h3>Dynamic Range</h3>
+                    <p>Analyze the difference between loud and quiet parts to avoid over-compression.</p>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon">🎛️</div>
+                    <h3>Frequency Balance</h3>
+                    <p>Visualize your mix's frequency distribution across low, mid, and high ranges.</p>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon">🎯</div>
+                    <h3>LUFS Metering</h3>
+                    <p>Professional loudness measurement for broadcast and streaming platform compliance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Improve Your Mixes?</h2>
+                <p>Join thousands of audio professionals using MixDoctor to create better music.</p>
+                <a href="https://apps.apple.com/app/mixdoctor" class="btn btn-primary btn-large">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+                    </svg>
+                    Download Now - It's Free
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="./mix-doctor.png" alt="MixDoctor Logo" width="60" height="60">
+                    </div>
+                    <p>Professional audio analysis for music producers and audio engineers.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="https://yevdevang.github.io/MixDoctor-Privacy-policy/" target="_blank">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">License</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="mailto:sound1980@gmail.com">Contact Us</a></li>
+                        <li><a href="mailto:sound1980@gmail.com">Email Support</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 MixDoctor. All rights reserved.</p>
+                <p>Professional Audio Analysis • Privacy-First • Made with ❤️ for Audio Professionals</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
