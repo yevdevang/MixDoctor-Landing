@@ -87,6 +87,13 @@ header {
     margin-bottom: var(--spacing-sm);
 }
 
+.nav-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
 nav {
     display: flex;
     gap: var(--spacing-md);
