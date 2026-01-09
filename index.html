@@ -30,9 +30,22 @@
     <meta name="theme-color" content="#6366f1">
     
     <title>MixDoctor - Professional Audio Analysis</title>
+    
+    <!-- Resource Hints for Performance -->
+    <link rel="preconnect" href="https://apps.apple.com" crossorigin>
+    <link rel="dns-prefetch" href="https://apps.apple.com">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="mix-doctor.png" as="image" type="image/png">
+    <link rel="preload" href="script.js" as="script">
+    
+    <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/mix-doctor.png">
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
     
     <!-- Structured Data / JSON-LD -->
@@ -478,6 +491,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
