@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /google4f771d2cd9c84f36.html
+
+Sitemap: https://mixdoctor.app/sitemap.xml
