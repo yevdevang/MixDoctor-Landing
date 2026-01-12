@@ -354,7 +354,7 @@ a:hover {
 
 /* Lists */
 ul {
-    padding-left: var(--spacing-lg);
+    /* padding-left: var(--spacing-lg); */
     margin-bottom: var(--spacing-md);
 }
 
