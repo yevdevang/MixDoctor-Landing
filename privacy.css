@@ -77,7 +77,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 1px solid var(--border);
 }
 
 .logo h1 {
@@ -121,14 +120,12 @@ main {
     margin: var(--spacing-lg);
     padding: var(--spacing-xl);
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
     padding: var(--spacing-xl) 0;
-    border-bottom: 2px solid var(--border);
     margin-bottom: var(--spacing-xl);
 }
 
@@ -153,9 +150,9 @@ main {
 }
 
 .content-section:last-child {
-    border-bottom: none;
     margin-bottom: 0;
     padding-bottom: 0;
+    border-bottom: none;
 }
 
 .content-section h2 {
@@ -198,7 +195,6 @@ main {
     padding: var(--spacing-lg);
     border-radius: var(--radius-md);
     margin: var(--spacing-lg) 0;
-    box-shadow: var(--shadow-lg);
 }
 
 .highlight-box h3 {
@@ -218,13 +214,11 @@ main {
     padding: var(--spacing-lg);
     border-radius: var(--radius-md);
     margin-bottom: var(--spacing-md);
-    border: 1px solid var(--border);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .info-card:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
 }
 
 .info-card h3 {
@@ -254,12 +248,10 @@ main {
     margin-bottom: var(--spacing-md);
     background: var(--background-alt);
     border-radius: var(--radius-md);
-    border: 1px solid var(--border);
     transition: all 0.2s ease;
 }
 
 .feature-list li:hover {
-    border-color: var(--primary-light);
     transform: translateX(5px);
 }
 
@@ -292,15 +284,12 @@ main {
     background: var(--background-alt);
     padding: var(--spacing-lg);
     border-radius: var(--radius-md);
-    border: 1px solid var(--border);
     text-align: center;
     transition: all 0.3s ease;
 }
 
 .security-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--primary-light);
 }
 
 .security-icon {
@@ -329,7 +318,6 @@ main {
     padding: var(--spacing-sm) var(--spacing-md);
     margin-bottom: var(--spacing-sm);
     background: var(--background-alt);
-    border-left: 4px solid var(--primary-color);
     border-radius: var(--radius-sm);
     font-size: 1.05rem;
 }
@@ -339,7 +327,6 @@ main {
     background: var(--background-alt);
     padding: var(--spacing-lg);
     border-radius: var(--radius-md);
-    border: 2px solid var(--primary-light);
     margin-top: var(--spacing-md);
 }
 
@@ -383,8 +370,7 @@ footer {
     padding: var(--spacing-xl) var(--spacing-lg);
     margin: var(--spacing-lg);
     margin-top: 0;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
+    /* border-radius: var(--radius-lg); */
     text-align: center;
 }
 
