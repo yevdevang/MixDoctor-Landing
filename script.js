@@ -6,12 +6,26 @@ const html = document.documentElement;
 const currentTheme = localStorage.getItem('theme') || 'light';
 html.setAttribute('data-theme', currentTheme);
 
+// Update Product Hunt badge theme
+function updateProductHuntBadge(theme) {
+    const badgeImg = document.querySelector('.producthunt-badge img');
+    if (badgeImg) {
+        const newTheme = theme === 'dark' ? 'dark' : 'light';
+        // Update the badge URL to match the theme
+        badgeImg.src = `https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1064408&theme=${newTheme}&t=${Date.now()}`;
+    }
+}
+
+// Set initial badge theme
+updateProductHuntBadge(currentTheme);
+
 themeToggle.addEventListener('click', () => {
     const currentTheme = html.getAttribute('data-theme');
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
     
     html.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
+    updateProductHuntBadge(newTheme);
     
     // Add a small animation effect
     themeToggle.style.transform = 'rotate(360deg)';
@@ -197,6 +211,7 @@ if (window.matchMedia && !localStorage.getItem('theme')) {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         html.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
+        updateProductHuntBadge('dark');
     }
 }
 
@@ -205,6 +220,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e)
     if (!localStorage.getItem('theme')) {
         const newTheme = e.matches ? 'dark' : 'light';
         html.setAttribute('data-theme', newTheme);
+        updateProductHuntBadge(newTheme);
     }
 });
 

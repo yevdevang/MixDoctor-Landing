@@ -109,6 +109,27 @@ body {
     padding-right: 80px; /* Space for theme toggle */
 }
 
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.producthunt-badge {
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s ease;
+}
+
+.producthunt-badge:hover {
+    opacity: 0.8;
+}
+
+.producthunt-badge img {
+    display: block;
+    height: auto;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -894,6 +915,15 @@ section {
         padding-right: 60px; /* Reduced space for smaller theme toggle */
     }
 
+    .nav-left {
+        gap: 12px;
+    }
+
+    .producthunt-badge img {
+        width: 180px;
+        height: auto;
+    }
+
     .theme-toggle {
         top: 20px;
         right: 10px;
@@ -926,6 +956,15 @@ section {
 
     .nav-content {
         padding-right: 80px; /* Space for theme toggle */
+    }
+
+    .nav-left {
+        gap: 16px;
+    }
+
+    .producthunt-badge img {
+        width: 220px;
+        height: auto;
     }
 
     .theme-toggle {
