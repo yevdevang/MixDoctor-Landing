@@ -36,8 +36,21 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      
+      // Initialize with consent mode (default to denied until user accepts)
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied'
+      });
+      
       gtag('js', new Date());
       gtag('config', 'G-YT1J4MB27C');
+      
+      // Check if user has already accepted cookies
+      if (localStorage.getItem('mixdoctor_cookie_consent') === 'accepted') {
+        gtag('consent', 'update', {
+          'analytics_storage': 'granted'
+        });
+      }
     </script>
     
     <title>MixDoctor - Professional Audio Analysis</title>
@@ -520,6 +533,26 @@
             </div>
         </div>
     </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+        <div class="cookie-banner-content">
+            <div class="cookie-banner-text">
+                <h3>🍪 Cookie Notice</h3>
+                <p>We use Google Analytics to understand how visitors interact with our website. This helps us improve your experience. By clicking "Accept", you consent to our use of cookies. <a href="privacy.html" target="_blank" rel="noopener">Learn more</a></p>
+            </div>
+            <div class="cookie-banner-actions">
+                <button id="cookieAccept" class="cookie-btn cookie-btn-accept">Accept</button>
+                <button id="cookieDecline" class="cookie-btn cookie-btn-decline">Decline</button>
+                <button id="cookieClose" class="cookie-btn-close" aria-label="Close cookie banner">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js" defer></script>
 </body>

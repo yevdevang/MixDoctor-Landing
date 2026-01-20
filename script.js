@@ -239,3 +239,84 @@ if ('IntersectionObserver' in window) {
     
     document.querySelectorAll('img[data-src]').forEach(img => imageObserver.observe(img));
 }
+
+// Cookie Consent Banner
+(function() {
+    const cookieBanner = document.getElementById('cookieBanner');
+    const cookieAccept = document.getElementById('cookieAccept');
+    const cookieDecline = document.getElementById('cookieDecline');
+    const cookieClose = document.getElementById('cookieClose');
+    
+    if (!cookieBanner) return;
+    
+    const COOKIE_CONSENT_KEY = 'mixdoctor_cookie_consent';
+    const COOKIE_CONSENT_ACCEPTED = 'accepted';
+    const COOKIE_CONSENT_DECLINED = 'declined';
+    
+    // Check if user has already made a choice
+    const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
+    
+    // Show banner if no consent has been given
+    if (!consent) {
+        setTimeout(() => {
+            cookieBanner.classList.add('show');
+        }, 1000); // Show after 1 second delay
+    } else {
+        // User has already made a choice
+        if (consent === COOKIE_CONSENT_ACCEPTED) {
+            // Analytics already enabled (default)
+            enableAnalytics();
+        } else {
+            // User declined, disable analytics
+            disableAnalytics();
+        }
+    }
+    
+    // Accept button handler
+    cookieAccept.addEventListener('click', () => {
+        localStorage.setItem(COOKIE_CONSENT_KEY, COOKIE_CONSENT_ACCEPTED);
+        enableAnalytics();
+        hideBanner();
+    });
+    
+    // Decline button handler
+    cookieDecline.addEventListener('click', () => {
+        localStorage.setItem(COOKIE_CONSENT_KEY, COOKIE_CONSENT_DECLINED);
+        disableAnalytics();
+        hideBanner();
+    });
+    
+    // Close button handler (doesn't save preference, will show again)
+    cookieClose.addEventListener('click', () => {
+        hideBanner();
+    });
+    
+    function hideBanner() {
+        cookieBanner.classList.remove('show');
+        setTimeout(() => {
+            cookieBanner.style.display = 'none';
+        }, 300);
+    }
+    
+    function enableAnalytics() {
+        // Analytics is enabled by default (gtag is already loaded)
+        // Just ensure it's not disabled
+        if (typeof gtag !== 'undefined') {
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted'
+            });
+        }
+    }
+    
+    function disableAnalytics() {
+        // Disable Google Analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('consent', 'update', {
+                'analytics_storage': 'denied'
+            });
+        }
+        
+        // Also disable the gtag function
+        window['ga-disable-G-YT1J4MB27C'] = true;
+    }
+})();
