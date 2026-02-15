@@ -410,6 +410,11 @@ body {
     display: block;
 }
 
+/* Mac screenshots need more space due to wider aspect ratio */
+.platform-screenshots[data-platform="mac"] .screenshot-item img {
+    max-height: 700px;
+}
+
 .screenshot-caption {
     padding: 20px;
     text-align: center;
@@ -513,6 +518,11 @@ body {
 .feature-image img:hover {
     transform: scale(1.02);
     box-shadow: 0 24px 80px var(--shadow);
+}
+
+/* Ensure Mac images display at a good size in feature showcase */
+.feature-platform-img[src*="Mac"] {
+    max-height: 500px;
 }
 
 /* Sections */

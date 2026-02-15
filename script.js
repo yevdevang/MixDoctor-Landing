@@ -37,6 +37,14 @@ themeToggle.addEventListener('click', () => {
 // Platform Screenshot Switcher
 const platformTabs = document.querySelectorAll('.platform-tab');
 const platformScreenshots = document.querySelectorAll('.platform-screenshots');
+const featurePlatformImages = document.querySelectorAll('.feature-platform-img');
+
+// Platform-specific dimensions
+const platformDimensions = {
+    ios: { width: 270, height: 585 },
+    ipad: { width: 820, height: 585 },
+    mac: { width: 1200, height: 750 }
+};
 
 platformTabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -54,6 +62,20 @@ platformTabs.forEach(tab => {
         if (targetScreenshots) {
             targetScreenshots.classList.add('active');
         }
+        
+        // Update feature showcase images
+        featurePlatformImages.forEach(img => {
+            const newSrc = img.getAttribute(`data-${platform}`);
+            if (newSrc) {
+                img.src = newSrc;
+                // Update dimensions
+                const dimensions = platformDimensions[platform];
+                if (dimensions) {
+                    img.setAttribute('width', dimensions.width);
+                    img.setAttribute('height', dimensions.height);
+                }
+            }
+        });
     });
 });
 
@@ -180,7 +202,7 @@ document.querySelectorAll('.btn').forEach(button => {
 
 // Console message for developers
 console.log('%c🎵 MixDoctor', 'font-size: 24px; font-weight: bold; color: #6B46C1;');
-console.log('%cProfessional Audio Analysis', 'font-size: 14px; color: #EC4899;');
+console.log('%cAI Audio Analyzer', 'font-size: 14px; color: #EC4899;');
 console.log('%cInterested in our API? Contact us at sound1980@gmail.com', 'font-size: 12px; color: #666;');
 
 // Preload critical images (if any)
