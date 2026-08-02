@@ -13,8 +13,8 @@
     <meta property="og:title" content="MixDoctor - AI Audio Analyzer App">
     <meta property="og:description" content="Analyze your audio mixes with AI-powered insights. Track quality metrics, get professional recommendations, and improve your music production.">
     <meta property="og:image" content="https://mixdoctor.app/mix-doctor.png">
-    <meta property="og:image:width" content="80">
-    <meta property="og:image:height" content="80">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
     <meta property="og:site_name" content="MixDoctor">
     
     <!-- Twitter -->
@@ -136,6 +136,7 @@
                 <ul class="nav-links">
                     <li><a href="#features">Features</a></li>
                     <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                     <li><a href="privacy.html">Privacy</a></li>
                 </ul>
             </div>
@@ -473,6 +474,130 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Everything you need to know about MixDoctor</p>
+
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>What is MixDoctor?</summary>
+                    <p>MixDoctor is an AI audio analyzer for iPhone, iPad, and Mac. It gives music producers instant feedback on stereo width, phase coherence, mono compatibility, dynamic range, frequency balance, and LUFS loudness, along with AI-powered mixing recommendations.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>What audio file formats does MixDoctor support?</summary>
+                    <p>MixDoctor supports WAV and MP3 files. You can import them from your device or iCloud Drive, or drag and drop directly into the app on macOS.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Is my audio uploaded to the cloud?</summary>
+                    <p>No. Core analysis runs locally on your device using Apple's Accelerate framework, so your audio files never leave your device. Optional iCloud sync is available if you want your results to follow you across devices.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Which devices and platforms does MixDoctor run on?</summary>
+                    <p>MixDoctor is available on iOS, iPadOS, and macOS, with an interface tailored to each: touch controls on iPhone, split-view and Apple Pencil support on iPad, and drag-and-drop with a full desktop workflow on Mac.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>What does MixDoctor analyze in my mix?</summary>
+                    <p>MixDoctor measures stereo width, phase coherence, mono compatibility, dynamic range, frequency balance, and LUFS loudness, and pairs each metric with AI-powered recommendations to help you fix issues.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Do I need to select a genre before analyzing a track?</summary>
+                    <p>Yes. Before importing, you choose your music genre and production stage (Mix or Master) so MixDoctor can tailor its analysis and recommendations accordingly.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Can I track my analysis history and progress?</summary>
+                    <p>Yes. The dashboard shows total files, analyzed tracks, issues found, and average quality scores, with filtering so you can quickly find tracks that need attention.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Is MixDoctor free to download?</summary>
+                    <p>Yes, MixDoctor is free to download on the App Store.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is MixDoctor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MixDoctor is an AI audio analyzer for iPhone, iPad, and Mac. It gives music producers instant feedback on stereo width, phase coherence, mono compatibility, dynamic range, frequency balance, and LUFS loudness, along with AI-powered mixing recommendations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What audio file formats does MixDoctor support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MixDoctor supports WAV and MP3 files. You can import them from your device or iCloud Drive, or drag and drop directly into the app on macOS."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my audio uploaded to the cloud?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Core analysis runs locally on your device using Apple's Accelerate framework, so your audio files never leave your device. Optional iCloud sync is available if you want your results to follow you across devices."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which devices and platforms does MixDoctor run on?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MixDoctor is available on iOS, iPadOS, and macOS, with an interface tailored to each: touch controls on iPhone, split-view and Apple Pencil support on iPad, and drag-and-drop with a full desktop workflow on Mac."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does MixDoctor analyze in my mix?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MixDoctor measures stereo width, phase coherence, mono compatibility, dynamic range, frequency balance, and LUFS loudness, and pairs each metric with AI-powered recommendations to help you fix issues."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to select a genre before analyzing a track?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Before importing, you choose your music genre and production stage (Mix or Master) so MixDoctor can tailor its analysis and recommendations accordingly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I track my analysis history and progress?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The dashboard shows total files, analyzed tracks, issues found, and average quality scores, with filtering so you can quickly find tracks that need attention."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is MixDoctor free to download?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, MixDoctor is free to download on the App Store."
+          }
+        }
+      ]
+    }
+    </script>
+
     <!-- CTA Section -->
     <section class="cta">
         <div class="container">
@@ -507,31 +632,26 @@
                     <ul>
                         <li><a href="#features">Features</a></li>
                         <li><a href="#how-it-works">How It Works</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#faq">FAQ</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4>Legal</h4>
                     <ul>
                         <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
-                        <li><a href="#">License</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4>Support</h4>
                     <ul>
-                        <li><a href="mailto:sound1980@gmail.com" 
+                        <li><a href="mailto:sound1980@gmail.com"
                                rel="noopener"
                                onclick="gtag('event', 'click', {'event_category': 'contact', 'event_label': 'email_footer'});">Contact Us</a></li>
-                        <li><a href="mailto:sound1980@gmail.com" 
+                        <li><a href="mailto:sound1980@gmail.com"
                                rel="noopener"
                                onclick="gtag('event', 'click', {'event_category': 'contact', 'event_label': 'email_support'});">Email Support</a></li>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Community</a></li>
                     </ul>
                 </div>
             </div>
